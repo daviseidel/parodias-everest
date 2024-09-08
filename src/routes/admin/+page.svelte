@@ -15,5 +15,5 @@
 </script>
 
 {#each data.records.items as parodia}
-  <button class="block btn variant-filled-surface m-3 flex flex-center text-center p-4 justify-center" on:click={updatePrincipal(parodia.id)} >{parodia.musica}</button>
+  <a class="block btn variant-filled-surface m-3 flex flex-center text-center p-4 justify-center" on:click={updatePrincipal(parodia.id)} >{parodia.musica}</a>
 {/each}
