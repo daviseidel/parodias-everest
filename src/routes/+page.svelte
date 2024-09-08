@@ -32,6 +32,9 @@
     isCaregado = invalidateAll()
     .then(() => {
         location.reload();
+    })
+    .catch(err => {
+        console.log(err)
       });
     //evento = await pb.collection('parodias').getOne(e.record.principal)
   });
