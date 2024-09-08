@@ -29,8 +29,7 @@
     console.log(e.action);
     // console.log(e.record);
     isCaregado = invalidateAll();
-    evento = await pb.collection('parodias').getOne(e.record.principal)
-    console.log(evento)
+    //evento = await pb.collection('parodias').getOne(e.record.principal)
     location.reload();
   });
   
