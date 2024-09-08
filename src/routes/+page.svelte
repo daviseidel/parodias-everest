@@ -28,9 +28,11 @@
   pb.collection('evento').subscribe('*',async function (e) {
     console.log(e.action);
     // console.log(e.record);
-    isCaregado = invalidateAll();
+    isCaregado = invalidateAll()
+    .then(() => {
+        location.reload();
+      });
     //evento = await pb.collection('parodias').getOne(e.record.principal)
-    location.reload();
   });
   
 </script>
