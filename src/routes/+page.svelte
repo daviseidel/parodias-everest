@@ -27,20 +27,13 @@
 
   pb.collection('evento').subscribe('*',async function (e) {
     console.log(e.action);
-    // console.log(e.record);
-    pb.autoCancellation(false);
-    isCaregado = invalidateAll()
-    .then(() => {
-        location.reload();
-    })
-    .catch(err => {
-        console.log(err)
-      });
-    //evento = await pb.collection('parodias').getOne(e.record.principal)
+    // console.log(e.record); 
+    parodia = await pb.collection('parodias').getOne(e.record.principal)
+    console.log(parodia)
   });
   
 </script>
-{#key evento}
+{#key parodia}
   <h1 class="h1 text-center my-1">{parodia.musica}</h1>
   <h4 class="h4 text-center my-5">Grupo: {parodia.nomes}</h4>
   <blockquote class="text-center">{@html parodia.letra}</blockquote>
