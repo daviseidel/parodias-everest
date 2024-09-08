@@ -28,6 +28,7 @@
   pb.collection('evento').subscribe('*',async function (e) {
     console.log(e.action);
     // console.log(e.record);
+    pb.autoCancellation(false);
     isCaregado = invalidateAll()
     .then(() => {
         location.reload();
