@@ -29,9 +29,9 @@
   }
 </script>
 
-<div class="flex flex-col my-16 p-12 card">
+<div class="flex flex-col my-16 p-6 w-60 card">
   <h3 class="h3 text-center">Avalie o Grupo!</h3>
-  <Ratings bind:value={value} max={5} interactive on:icon={iconClick} class="w-60 h-32 m-0">
+  <Ratings bind:value={value} max={5} interactive on:icon={iconClick} class="w-60 my-5">
       <svelte:fragment slot="empty">
         <FaRegStar/>      
       </svelte:fragment>
