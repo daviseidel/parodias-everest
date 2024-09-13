@@ -7,11 +7,11 @@
   const url = 'https://parodias-everest.pockethost.io/'
   const pb = new PocketBase(url)
 
-  let value;
+  import { podeVotar } from "$lib/store.js"
 
+  let value;
   function iconClick(event){
     value = event.detail.index;
-    console.log(value)
   }
 
   export let data;
@@ -21,15 +21,20 @@
     console.log(e.action);
     // console.log(e.record); 
     parodia = await pb.collection('parodias').getOne(e.record.principal)
+    podeVotar.set(true)
   });  
 </script>
+
 
 {#key parodia}
   <h1 class="h1 text-center my-1">{parodia.musica}</h1>
   <h4 class="h4 text-center my-5">Grupo: {parodia.nomes}</h4>
   <blockquote class="text-center">{@html parodia.letra}</blockquote>
-  <div class="flex justify-center items-center">
-    <Voto InsideClass="flex justify-center items-center" parodia="{parodia.id}"/> 
-  </div>
+
+  {#if $podeVotar}
+    <div class="flex justify-center items-center">
+      <Voto InsideClass="flex justify-center items-center" parodia="{parodia.id}"/> 
+    </div>
+  {/if}
 {/key}
 

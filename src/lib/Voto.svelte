@@ -4,6 +4,7 @@
   import FaStarHalfAlt from 'svelte-icons/fa/FaStarHalfAlt.svelte'
   import { Ratings } from '@skeletonlabs/skeleton';
 
+  import { podeVotar } from "$lib/store.js"
   
   import PocketBase from 'pocketbase';
   const url = 'https://parodias-everest.pockethost.io/'
@@ -16,16 +17,15 @@
 
   function iconClick(event){
     value = event.detail.index;
-    console.log(value)
   }
 
   async function enviar(){
-    alert(parodia)
     const record = await pb.collection('notas').create({
       "nota": value,
       "parodia": parodia
     });
-    console.log(record)
+
+    podeVotar.set(false)
   }
 </script>
 
