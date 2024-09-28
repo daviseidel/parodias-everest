@@ -5,7 +5,7 @@ Um web-app criado para ajudar os alunos do Colégio Everest a acompanhar as letr
 ## Features
 
 - Atualização de letra ao vivo
-- ~Notas do público~ (Em Breve) 
+- Notas do público
 - Multiplataforma
 
 ## Tech Stack
