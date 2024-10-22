@@ -3,6 +3,7 @@ import { join } from 'path'
 import forms from '@tailwindcss/forms';
 import typography from '@tailwindcss/typography';
 import { skeleton } from '@skeletonlabs/tw-plugin'
+import { temaEverest } from './tema-everest.ts'
 /** @type {import('tailwindcss').Config} */
 export default {
 	darkMode: 'class',
@@ -21,6 +22,9 @@ export default {
 						enhancements: true,
 					},
 				],
+      custom: [
+        temaEverest,
+      ],
 			},
 		}),
 	],

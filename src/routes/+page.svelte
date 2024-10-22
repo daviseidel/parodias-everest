@@ -27,7 +27,7 @@
 
 
 {#key parodia}
-  <h1 class="h1 text-center my-1">{parodia.musica}</h1>
+  <h1 class="h1 text-center my-1"><strong>{parodia.musica}</strong></h1>
   <h4 class="h4 text-center my-5">Grupo: {parodia.nomes}</h4>
   <blockquote class="text-center">{@html parodia.letra}</blockquote>
 
