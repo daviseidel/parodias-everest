@@ -27,8 +27,8 @@
 
 
 {#key parodia}
-  <h1 class="h1 text-center my-1"><strong>{parodia.musica}</strong></h1>
-  <h4 class="h4 text-center my-5">Grupo: {parodia.nomes}</h4>
+  <h1 class="h1 text-center my-3"><strong>{parodia.musica}</strong></h1>
+  <!-- <h4 class="h4 text-center my-5">Grupo: {parodia.nomes}</h4> -->
   <blockquote class="text-center">{@html parodia.letra}</blockquote>
 
   {#if $podeVotar}
