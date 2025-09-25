@@ -10,7 +10,7 @@
 		<AppBar class="p-3 space-x-1" background="bg-primary-500">
 			<svelte:fragment slot="lead">
         <img class="w-7 space-x-1 mr-3 " src="./favicon.png"alt="logo ">
-				<strong class="text-xl uppercase"> Paródias Everest</strong>
+				<strong class="text-xl uppercase"> Paródias Heavenly</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				
